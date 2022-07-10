@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/meal-recipe-app/static/css/main.073c9b0a.css",
+    "main.js": "/meal-recipe-app/static/js/main.10f5133d.js",
+    "index.html": "/meal-recipe-app/index.html",
+    "main.073c9b0a.css.map": "/meal-recipe-app/static/css/main.073c9b0a.css.map",
+    "main.10f5133d.js.map": "/meal-recipe-app/static/js/main.10f5133d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.10f5133d.js"
+  ]
+}
