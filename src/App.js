@@ -12,6 +12,9 @@ function App() {
       colorBgLightblue: "#D3FFED",
       colorBgWhite: "#FFFCF3",
     },
+    responsive: {
+      smallDevice: "768px",
+    },
   };
   return (
     <Fragment>

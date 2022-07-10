@@ -1,19 +1,22 @@
 import React, { Fragment } from 'react'
-import LoginCard from './Login.styled';
+import LoginCard,{LoginForm, LoginInput,LoginContainer,LoginButton, LoginImg} from './Login.styled';
+import meal2 from "../../assets/meal2.svg"
 const Login = () => {
   return (
     <Fragment>
-      <LoginCard >
-    <form  >
-   
-      <div><input type="text"  id='userName' required placeholder='USERNAME'/></div>
-      <div><input type="password"  id='password' required min="5" max="10" placeholder='USERNAME'/></div>
-      <button>
-        LOGIN
-      </button>
-    </form>
-
-      </LoginCard>
+      <LoginContainer>
+        <LoginCard >
+          
+          <LoginImg  src={meal2} />
+            <LoginForm  >
+        <LoginInput type="text"  id='userName' required placeholder='USERNAME'/>
+        <LoginInput type="password"  id='password' required minLength="5" max="10" placeholder='Password'/>
+        <LoginButton>
+          LOGIN
+        </LoginButton>
+            </LoginForm>
+        </LoginCard>
+      </LoginContainer>
     </Fragment>
   )
 }
