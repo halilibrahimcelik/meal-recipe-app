@@ -5,6 +5,7 @@ import AppRouter from "./router/AppRouter";
 import { GlobalStyles } from "./UI/Global.styles";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const themes = {
