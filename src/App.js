@@ -1,8 +1,10 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
 import AppRouter from "./router/AppRouter";
 import { GlobalStyles } from "./UI/Global.styles";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const themes = {
@@ -17,6 +19,10 @@ function App() {
       smallDevice: "768px",
     },
   };
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Fragment>
       <ThemeProvider theme={themes}>
