@@ -8,10 +8,10 @@ const Login = () => {
 
 
 const submitHandler=(e)=>{
-
+e.preventDefault();
   sessionStorage.setItem("username",userName);
   window.location.href="/home";
-  navigate("/home");
+  // navigate("/home");
 
 
 

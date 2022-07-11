@@ -1,8 +1,17 @@
 import React from 'react'
+import Form from '../../components/form/Form'
+
+
+import { Section,Title } from "./Home.styled"
 
 const Home = () => {
+    const fetchDAta
   return (
-    <div>Home</div>
+    <Section>
+        <Title>Recipe App</Title>
+        <Form></Form>
+
+    </Section>
   )
 }
 
