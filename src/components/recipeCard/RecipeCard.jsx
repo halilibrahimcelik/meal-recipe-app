@@ -1,8 +1,20 @@
 import React from 'react'
+import { Wrapper,Title,Main,Image,Button } from './RecipeCard.styled'
 
-const RecipeCard = () => {
+const RecipeCard = ({infos}) => {
+    console.log(infos)
+    const {label,image}=infos;
   return (
-    <div>RecipeCard</div>
+    <Wrapper>
+
+        <Main>
+            <Title>{label} </Title>
+        <Image src={image} />
+        <Button>View More</Button>
+        </Main>
+
+
+    </Wrapper>
   )
 }
 
