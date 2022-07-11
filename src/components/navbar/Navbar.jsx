@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { Fragment, useState,useEffect } from 'react'
 import { NavbarContainer,NavBarLogo, NavBarTitle,LinkList, NavbarLink, NavbarAnchor, NavbarLogoContainer } from './Navbar.styled';
 import home from "../../assets/homeLogo.svg";
-import {NavLink} from "react-router-dom";
+
 
 
 const Navbar = () => {
+    const LocalData=sessionStorage.getItem("username");
+    const [isOpen,setIsOpen]=useState(LocalData || false);
+
+
+    useEffect(() => {
+        if(LocalData){
+
+            setIsOpen(true)
+        }
+    }, [LocalData])
+    console.log(LocalData)
+
+    const logOutHandler=()=>{
+        setIsOpen(false);
+        sessionStorage.removeItem("username");
+    }
    
   return (
-    <NavbarContainer>
+    <Fragment>
+   {isOpen? <NavbarContainer>
    <NavbarLogoContainer>
        <NavBarLogo src={home} />
-        <NavbarLink to="/">
+        <NavbarLink to="/home">
             <NavBarTitle>RECIPES</NavBarTitle>
         </NavbarLink>
    </NavbarLogoContainer>
@@ -23,10 +40,12 @@ const Navbar = () => {
         <NavbarAnchor href="https://github.com/halilibrahimcelik" target="_blank" rel="noopener noreferrer" >GITHUB</NavbarAnchor>
         </li>
     <li>
-        <NavbarLink to="/login">LOGOUT</NavbarLink>
+        <NavbarLink to="/login" onClick={logOutHandler}>LOGOUT</NavbarLink>
     </li>
 </LinkList>
-    </NavbarContainer>
+    </NavbarContainer>:null}
+
+    </Fragment>
   )
 }
 

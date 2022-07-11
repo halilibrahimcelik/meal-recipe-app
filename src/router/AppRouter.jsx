@@ -7,17 +7,20 @@ import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import NotFound from "../pages/notFound/NotFound";
 const AppRouter = () => {
+
   return (
     <BrowserRouter>
+    
     <Navbar/>
 
     <Routes>
-    {/* <Route path="/" element={<Login/>} /> */}
+    <Route path="/" element={<Login/>} />
     <Route path="/login" element={<Login/>} />
-    <Route path="/home" element={<Home/>} />
-    <Route path="/about" element={<About/>} />
-    <Route path="/logout" element={<Login/>} />
-    <Route path="*" element={<NotFound/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/logout" element={<Login/>} />
+        <Route path="*" element={<NotFound/>} />
+
     
 
     </Routes>
