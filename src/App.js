@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
-import Login from "./pages/login/Login";
+
+import AppRouter from "./router/AppRouter";
 import { GlobalStyles } from "./UI/Global.styles";
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
     <Fragment>
       <ThemeProvider theme={themes}>
         <GlobalStyles />
-        <Login />
+        <AppRouter />
       </ThemeProvider>
     </Fragment>
   );
