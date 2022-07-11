@@ -1,23 +1,29 @@
 import React from 'react'
-import { NavbarContainer,NavBarLogo, NavBarTitle,LinkList } from './Navbar.styled';
+import { NavbarContainer,NavBarLogo, NavBarTitle,LinkList, NavbarLink, NavbarAnchor, NavbarLogoContainer } from './Navbar.styled';
 import home from "../../assets/homeLogo.svg";
 import {NavLink} from "react-router-dom";
 
+
 const Navbar = () => {
+   
   return (
     <NavbarContainer>
-   <div>
+   <NavbarLogoContainer>
        <NavBarLogo src={home} />
-        <NavBarTitle>RECIPES</NavBarTitle>
-   </div>
+        <NavbarLink to="/">
+            <NavBarTitle>RECIPES</NavBarTitle>
+        </NavbarLink>
+   </NavbarLogoContainer>
 
 <LinkList>
     <li>
-        <NavLink to="/about">ABOUT</NavLink>
+        <NavbarLink  to="/about">ABOUT</NavbarLink>
     </li>
-    <li><a href="https://github.com/halilibrahimcelik" target="_blank" rel="noopener noreferrer" >GITHUB</a></li>
     <li>
-        <NavLink to="/login">LOGOUT</NavLink>
+        <NavbarAnchor href="https://github.com/halilibrahimcelik" target="_blank" rel="noopener noreferrer" >GITHUB</NavbarAnchor>
+        </li>
+    <li>
+        <NavbarLink to="/login">LOGOUT</NavbarLink>
     </li>
 </LinkList>
     </NavbarContainer>

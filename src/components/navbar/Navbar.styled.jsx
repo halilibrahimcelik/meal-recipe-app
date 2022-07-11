@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {NavLink} from "react-router-dom"
 
 export const NavbarContainer=styled.nav`
 width:100%;
@@ -10,8 +10,21 @@ display:flex;
 justify-content: space-between;
 align-items:baseline;
 
+@media (max-width: ${({ theme }) => theme.responsive.smallDevice}) {
+    flex-direction: column;
+ 
+    padding:1rem;
+  }
 
+`;
 
+export const NavbarLogoContainer=styled.div`
+display:flex;
+align-items:baseline;
+@media (max-width: ${({ theme }) => theme.responsive.smallDevice}) {
+
+margin: 0 auto;
+  }
 `
 export const NavBarLogo=styled.img`
 width:50px;
@@ -19,7 +32,7 @@ height: 50px;
 object-fit:cover;
 color:white;
 `
-export const NavBarTitle=styled.h1`
+export const NavBarTitle=styled.h2`
 color:${({theme})=>theme.colors.colorBgWhite};
 font-style: italic;
 display:inline;
@@ -29,9 +42,41 @@ export const LinkList=styled.ul `
 display:flex;
 gap:2rem;
 margin-right: 2rem;
+@media (max-width: ${({ theme }) => theme.responsive.smallDevice}) {
+    flex-direction: column;
+margin:0 auto;
+justify-content:center;
+align-items:center;
+  }
 
 
 `
-export const LinkElement=styled.li`
-text-decoration: none;
-`
+
+export const NavbarLink = styled(NavLink)` color:white;
+ font-size: x-large;
+ font-family: Arial, Helvetica, sans-serif;
+ text-decoration: none;
+
+ margin: 10px;
+&:hover,
+&:focus{
+    color:#415a68;
+    text-decoration: underline;
+}
+&:active{
+    color: #fff;
+};`
+export const NavbarAnchor = styled.a` color:white;
+ font-size: x-large;
+ font-family: Arial, Helvetica, sans-serif;
+ text-decoration: none;
+
+ margin: 10px;
+&:hover,
+&:focus{
+    color:#415a68;
+    text-decoration: underline;
+}
+&:active{
+    color: #fff;
+};`

@@ -8,6 +8,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 margin-top: 10rem;
+@media (max-width: ${({ theme }) => theme.responsive.smallDevice}) {
+  margin-top: 0;
+
+  }
 
 `
 const LoginCard= styled.main`
