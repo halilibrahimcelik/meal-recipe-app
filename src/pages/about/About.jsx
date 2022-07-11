@@ -16,9 +16,8 @@ const About = () => {
           <p data-aos="fade-left">You can check my latest projects via visiting my Github page</p>
           
 
-      <div  data-aos="flip-left"
-    //  data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000"><strong>Send email</strong>: <a href = "mailto:hibrahim.celik@yahoo.com">hibrahim.celik@yahoo.com</a></div>
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom"><strong>Send email</strong>: <a href = "mailto:hibrahim.celik@yahoo.com">hibrahim.celik@yahoo.com</a></div>
       </Article>
       
 

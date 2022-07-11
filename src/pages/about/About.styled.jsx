@@ -32,6 +32,7 @@ border-radius:7px;
 display:grid;
 gap:10px;
 box-shadow: 4px 4px 5px rgba(0,0,0,0.5);
+font-size:1rem;
 
 
 `
