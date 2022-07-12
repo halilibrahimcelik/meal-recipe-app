@@ -11,14 +11,14 @@ import RequiredAuth from "../components/RequiredAuth/RequiredAuth";
 import useAuth from "../hooks/useAuth";
 const AppRouter = () => {
 
-  const context=useAuth()
+  const context=useAuth();
   return (
     <BrowserRouter>
     
     {context.isLoggedIn &&<Navbar/>}
 
     <Routes>
-    <Route path="/" element={<Login/>} />
+    {/* <Route path="/" element={<Login/>} /> */}
     <Route path="/login" element={<Login/>} />
         <Route path="/logout" element={<Login/>} />
 

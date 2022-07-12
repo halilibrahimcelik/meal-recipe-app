@@ -14,7 +14,7 @@ const Form = (props) => {
     if(mealType==="" || query===""){
       toast.warn('Please fill blanks!', {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
