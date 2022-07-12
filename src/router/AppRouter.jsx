@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { BrowserRouter,Routes,Route, HashRouter } from "react-router-dom";
 
 import React, { useContext } from 'react'
 import Login from "../pages/login/Login";
@@ -9,11 +9,12 @@ import NotFound from "../pages/notFound/NotFound";
 import Details from "../pages/details/Details";
 import RequiredAuth from "../components/RequiredAuth/RequiredAuth";
 import useAuth from "../hooks/useAuth";
+
 const AppRouter = () => {
 
   const context=useAuth();
   return (
-    <BrowserRouter>
+    <HashRouter>
     
     {context.isLoggedIn &&<Navbar/>}
 
@@ -34,7 +35,7 @@ const AppRouter = () => {
 
     </Routes>
     
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
