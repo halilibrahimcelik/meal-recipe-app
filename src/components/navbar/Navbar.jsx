@@ -1,6 +1,7 @@
 import React, { Fragment, useState,useEffect } from 'react'
 import { NavbarContainer,NavBarLogo, NavBarTitle,LinkList, NavbarLink, NavbarAnchor, NavbarLogoContainer } from './Navbar.styled';
 import home from "../../assets/homeLogo.svg";
+import useAuth from '../../hooks/useAuth';
 
 
 
@@ -9,22 +10,22 @@ const Navbar = () => {
     const [isOpen,setIsOpen]=useState(LocalData || false);
 
 
-    useEffect(() => {
-        if(LocalData){
+    // useEffect(() => {
+    //     if(LocalData){
 
-            setIsOpen(true)
-        }
-    }, [LocalData])
-    console.log(LocalData)
+    //         setIsOpen(true)
+    //     }
+    // }, [LocalData])
+    // console.log(LocalData)
+    const context=useAuth()
 
     const logOutHandler=()=>{
-        setIsOpen(false);
-        sessionStorage.removeItem("username");
+  context.onLogout()
     }
    
   return (
     <Fragment>
-   {isOpen? <NavbarContainer>
+ <NavbarContainer>
    <NavbarLogoContainer>
        <NavBarLogo src={home} />
         <NavbarLink to="/home">
@@ -43,7 +44,7 @@ const Navbar = () => {
         <NavbarLink to="/login" onClick={logOutHandler}>LOGOUT</NavbarLink>
     </li>
 </LinkList>
-    </NavbarContainer>:null}
+    </NavbarContainer>
 
     </Fragment>
   )
