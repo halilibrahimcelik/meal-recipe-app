@@ -18,14 +18,14 @@ const AppRouter = () => {
     {context.isLoggedIn &&<Navbar/>}
 
     <Routes>
-    <Route path="meal-recipe-app/" element={<Login/>} />
-    <Route path="/meal-recipe-app/login" element={<Login/>} />
-        <Route path="/login" element={<Login/>} />
+    <Route path="/" element={<Login/>} />
+    <Route path="/login" element={<Login/>} />
+        <Route path="/logout" element={<Login/>} />
 
     <Route element={<RequiredAuth/>}>
 
         <Route path="/home" element={<Home/>} />
-        <Route path="/details" element={<Details/>} />
+        <Route path="/home/details" element={<Details/>} />
         <Route path="/about" element={<About/>} />
     </Route>
         <Route path="*" element={<NotFound/>} />
