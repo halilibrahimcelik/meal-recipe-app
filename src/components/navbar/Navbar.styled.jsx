@@ -34,7 +34,7 @@ color:white;
 `
 export const NavBarTitle=styled.h2`
 color:${({theme})=>theme.colors.colorBgWhite};
-font-style: italic;
+font-style: normal;
 display:inline;
 margin-left: 10px;
 `
