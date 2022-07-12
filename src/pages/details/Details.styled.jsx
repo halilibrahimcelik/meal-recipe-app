@@ -29,7 +29,8 @@ margin-bottom: 2rem;
 export const Image=styled.img`
 display:inline-block;
 object-fit:cover;
-width:30px;
+width:${({ wd }) => wd || "30px"};
+border-radius: 8px;
 `
 export const H2=styled.h2`
 text-align:center;
@@ -50,8 +51,17 @@ align-items:center;
 `
 export const Card=styled.div`
 width:20rem;
-
+background-color:#e7c2c2;
 padding:1rem;
 box-shadow: 5px  5px 5px 2px rgba(0,0,0,0.5);
 border-radius: 6px;
+`
+export const Flex=styled.div`
+display:grid;
+
+margin:2rem auto;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap:1rem;
+
+
 `

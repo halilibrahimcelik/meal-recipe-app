@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Container,Title,Wrapper,Image,H2,IngredientCard,Card} from './Details.styled';
+import { Container,Title,Wrapper,Image,H2,IngredientCard,Card,Flex} from './Details.styled';
 import caloryIcon from "../../assets/calories.png"
 const Details = (data) => {
     const location=useLocation();
     const {infos}=location.state
-    const {cuisineType,ingredients,label,calories}=infos;
+    const {cuisineType,ingredients,label,calories,image}=infos;
     console.log(ingredients)
 
     function capitalize(str) {
@@ -16,10 +16,13 @@ const Details = (data) => {
     <Fragment>
         <Container>
         <Title data-aos="fade-right">{label} </Title>
-        <Wrapper  data-aos="flip-left">
-        <div><strong>Cuisine Type: </strong><span>{(capitalize(cuisineType[0]))} </span> </div>
-       <div style={{display:"flex", alignItems:"center"}}><strong>Calories (per 100gr): </strong><span style={{display:"flex", alignItems:"center" ,gap:"0.4rem"}} >{parseInt(calories)/10} <Image src={caloryIcon} alt=""/></span></div>
-        </Wrapper>
+        <Flex>
+            <Wrapper  data-aos="flip-left">
+            <div><strong>Cuisine Type: </strong><span>{(capitalize(cuisineType[0]))} </span> </div>
+                   <div style={{display:"flex", alignItems:"center"}}><strong>Calories (per 100gr): </strong><span style={{display:"flex", alignItems:"center" ,gap:"0.4rem"}} >{parseInt(calories)/10} <Image src={caloryIcon} alt=""/></span></div>
+            </Wrapper>
+            <Image wd="150px" src={image} />
+        </Flex>
 
         <H2 data-aos="fade-right"> Ingredients</H2>
 <IngredientCard>
