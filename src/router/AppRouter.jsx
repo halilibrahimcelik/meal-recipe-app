@@ -25,9 +25,9 @@ const AppRouter = () => {
 
     <Route element={<RequiredAuth/>}>
 
-        <Route path="/home" element={<Home/>} />
-        <Route path="/home/details" element={<Details/>} />
-        <Route path="/about" element={<About/>} />
+       {context.isLoggedIn && <Route path="/home" element={<Home/>} />}
+      {context.isLoggedIn &&  <Route path="/home/details" element={<Details/>} />}
+      (context.isLoggedIn &&  <Route path="/about" element={<About/>} />)
     </Route>
         <Route path="*" element={<NotFound/>} />
 

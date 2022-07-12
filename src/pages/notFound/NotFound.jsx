@@ -2,7 +2,11 @@ import React from 'react'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <>
+    
+    <h1 style={{textAlign:"center", color:"white",margin:"3rem"}}>NOT FOUND :(</h1>
+    
+    </>
   )
 }
 

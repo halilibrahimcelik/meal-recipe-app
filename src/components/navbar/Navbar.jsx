@@ -7,16 +7,8 @@ import useAuth from '../../hooks/useAuth';
 
 const Navbar = () => {
     const LocalData=sessionStorage.getItem("username");
-    const [isOpen,setIsOpen]=useState(LocalData || false);
+ 
 
-
-    // useEffect(() => {
-    //     if(LocalData){
-
-    //         setIsOpen(true)
-    //     }
-    // }, [LocalData])
-    // console.log(LocalData)
     const context=useAuth()
 
     const logOutHandler=()=>{
