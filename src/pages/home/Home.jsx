@@ -8,7 +8,7 @@ import RecipeList from '../../components/recipeList/RecipeList';
 const APP_KEY="8d62be9b0f0896b948402c50250d84c3";
 const APP_ID="10d664a5";
 const query="pizza";
-const meals="lunch";
+// const meals="lunch";
 const Home = () => {
   const [currentData,setData]=useState("");
   const [meal,setMeal]=useState("");
@@ -39,10 +39,11 @@ const Home = () => {
 //       }
 //     }
 
+
 const gettingData=useCallback(
   () => {
     try {
-      const response=   axios.get(`https://api.edamam.com/search?q=${enteredQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meals}`);
+      const response=   axios.get(`https://api.edamam.com/search?q=${enteredQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`);
       response.then(({data})=> setData(data))
      
       
@@ -58,7 +59,7 @@ const gettingData=useCallback(
         console.log('Erroror', error.message);
     }
     }
-  },[enteredQuery])
+  },[enteredQuery,meal])
 
 
 useEffect(()=>{
@@ -72,7 +73,7 @@ console.log(hits)
     <Section>
         <Title>Recipe App</Title>
         <Form meal={setMeal} enteredQuery={setEnteredQuery} ></Form>
-      <RecipeList meals={hits} />
+     { hits&& <RecipeList meals={hits} />}
 
      
     </Section>

@@ -6,6 +6,7 @@ import Navbar from "../components/navbar/Navbar";
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import NotFound from "../pages/notFound/NotFound";
+import Details from "../pages/details/Details";
 const AppRouter = () => {
 
   return (
@@ -17,6 +18,7 @@ const AppRouter = () => {
     <Route path="/" element={<Login/>} />
     <Route path="/login" element={<Login/>} />
         <Route path="/home" element={<Home/>} />
+        <Route path="/home/details" element={<Details/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/logout" element={<Login/>} />
         <Route path="*" element={<NotFound/>} />

@@ -9,7 +9,7 @@ const RecipeList = (props) => {
   return (
     <Container>
 {meals?.map((meal,index)=> {
-    return <RecipeCard infos={meal.recipe} key={index} />} )}
+    return <RecipeCard infos={meal.recipe} key={index}   data-aos="flip-up"/>} )}
             
     </Container>
   )
