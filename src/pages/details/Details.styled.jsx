@@ -31,7 +31,27 @@ display:inline-block;
 object-fit:cover;
 width:30px;
 `
-export const subTitle=styled.h2`
+export const H2=styled.h2`
 text-align:center;
 color:#352525;
+margin-bottom: 2rem;
+`;
+
+export const IngredientCard=styled.div`
+display:flex;
+flex-wrap: wrap;
+justify-content:center;
+align-items:center;
+
+ gap:2rem;
+
+
+
+`
+export const Card=styled.div`
+width:20rem;
+
+padding:1rem;
+box-shadow: 5px  5px 5px 2px rgba(0,0,0,0.5);
+border-radius: 6px;
 `

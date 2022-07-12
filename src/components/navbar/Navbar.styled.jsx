@@ -40,6 +40,7 @@ margin-left: 10px;
 `
 export const LinkList=styled.ul `
 display:flex;
+list-style:none;
 gap:2rem;
 margin-right: 2rem;
 @media (max-width: ${({ theme }) => theme.responsive.smallDevice}) {
