@@ -4,7 +4,7 @@ import { Container } from './RecipeList.styled';
 
 const RecipeList = (props) => {
     const{meals}=props;
-    console.log(meals)
+
     
   return (
     <Container>

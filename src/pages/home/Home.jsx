@@ -15,18 +15,15 @@ const Home = () => {
   const [meal,setMeal]=useState("");
   const [enteredQuery,setEnteredQuery]=useState("");
 
-  console.log(meal,enteredQuery)
- 
-  console.log(currentData)
   
 
   const gettingData=useCallback(
-  () => {
+  async() => {
     try {
-      const response=   axios.get(`https://api.edamam.com/search?q=${enteredQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`);
-      response.then(({data})=> setData(data))
-     console.log(response)
-      
+      const {data}=   await axios.get(`https://api.edamam.com/search?q=${enteredQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`);
+    
+     console.log({data})
+      setData(data)
     } catch (error) {
 
       if (error.response) {
@@ -42,45 +39,38 @@ const Home = () => {
     }
   },[enteredQuery,meal])
     
-  
-  
+
   useEffect(()=>{
       gettingData()
 
   },[meal,enteredQuery,gettingData])
-const {hits}=currentData
 
+const {hits}=currentData
+console.log(hits)
 if(hits?.length===0){
-  toast.error('Please Enter a valid query', {
-    position: "top-center",
-    autoClose: 5000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    });
-  
+
+ 
+   
+     toast.error('Please enter a valid query!', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+ 
 }
 
-console.log(hits)
+
   return (
     <Section>
         <Title>Recipe App</Title>
         <Form meal={setMeal} enteredQuery={setEnteredQuery} ></Form>
      { hits&& <RecipeList meals={hits} />}
 
-     <ToastContainer
-position="top-center"
-autoClose={2000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-/>
+     <ToastContainer />
     </Section>
   )
 }

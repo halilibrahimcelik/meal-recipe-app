@@ -24,8 +24,7 @@ const Form = (props) => {
       console.log("olmaz");
       return
     }
-console.log(query);
-console.log(mealType)
+
 enteredQuery(query);
 meal(mealType)
       setQuery("")
