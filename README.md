@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 *****
 [Website Link](https://halilibrahimcelik.github.io/meal-recipe-app/).
 
+![recipe-App](https://user-images.githubusercontent.com/92088301/178738252-9aaf8e2c-78ce-4e43-8a7d-c8908a9d7f8b.gif)
+
+
+https://github.com/halilibrahimcelik/meal-recipe-app/issues/1#issue-1303394957
  My goal is to create basic recipe application. 
 
 So as to  fetch the data, I used  "https://api.edamam.com/" API.
@@ -22,4 +26,4 @@ Creating basic login page for the authentication,
 
 --Creating custom react hook by using useContext for authentication,
 
---using axios for fetching the API from the server,
+--Using axios for fetching the API from the server,
