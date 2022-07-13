@@ -50,36 +50,37 @@ const {hits}=currentData;
 
 
 
-if(hits?.length===0  ){
-
- 
- if(!toggle)
-  {  console.log(hits.length)
-     toast.error('Please enter a valid query!', {
-      position: "top-right",
-      autoClose: 1000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      });
-   setToggle(true)
-  }else{
-    console.log("error")
+  if(hits?.length===0  ){
+  
+   if(!toggle)
+    {  console.log(hits.length)
+       toast.error('Please enter a valid query!', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+     setToggle(!toggle)
+    }
+    console.log(hits.length)
   }
 
-}
+
 
 
   return (
     <Section>
+
         <Title>Recipe App</Title>
         <Form meal={setMeal} enteredQuery={setEnteredQuery}
       ></Form>
+
      { hits&& <RecipeList meals={hits} />}
 
- 
+
     </Section>
   )
 }
