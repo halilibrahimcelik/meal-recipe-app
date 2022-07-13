@@ -17,6 +17,8 @@ const RecipeCard = ({infos}) => {
         </Main>
  {false&&   <Details data={infos} />}
 
+
+  
     </Wrapper>
   )
 }

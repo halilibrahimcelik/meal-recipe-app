@@ -1,9 +1,12 @@
 import React, { Fragment } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation,useNavigate } from 'react-router-dom'
 import { Container,Title,Wrapper,Image,H2,IngredientCard,Card,Flex} from './Details.styled';
-import caloryIcon from "../../assets/calories.png"
+import caloryIcon from "../../assets/calories.png";
+import { LoginButton } from '../login/Login.styled';
+
 const Details = (data) => {
     const location=useLocation();
+    const navigate=useNavigate();
     const {infos}=location.state
     const {cuisineType,ingredients,label,calories,image}=infos;
     console.log(ingredients)
@@ -37,6 +40,7 @@ const Details = (data) => {
         </Card>)
     })  }
 </IngredientCard>
+<LoginButton   bg="#E93E44"  data-aos="zoom-in-right"   onClick={()=>navigate("/home")} >Home</LoginButton>
         </Container>
 
 
