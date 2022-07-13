@@ -6,6 +6,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 color:#eadcdc;
+gap:1rem;
 
  padding:3rem;
  background-color:${({theme})=>theme.colors.colorDarkBlue};
@@ -18,7 +19,7 @@ export const Title=styled.h1`
 text-align:center;
 
 font-size: 2rem;
-margin-bottom: 2rem;
+margin-bottom: 1rem;
 `;
 
 export const Wrapper=styled.div`

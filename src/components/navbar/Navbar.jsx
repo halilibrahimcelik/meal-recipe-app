@@ -1,4 +1,4 @@
-import React, { Fragment, useState,useEffect } from 'react'
+import React, { Fragment} from 'react'
 import { NavbarContainer,NavBarLogo, NavBarTitle,LinkList, NavbarLink, NavbarAnchor, NavbarLogoContainer } from './Navbar.styled';
 import home from "../../assets/homeLogo.svg";
 import useAuth from '../../hooks/useAuth';
