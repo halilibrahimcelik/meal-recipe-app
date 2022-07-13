@@ -32,7 +32,12 @@ meal(mealType)
   }
   return (
     <Fragment>
-        <FoodForm onSubmit={handleSubmit}>
+        <FoodForm onSubmit={handleSubmit}
+           data-aos="fade-left"
+           data-aos-anchor="#example-anchor"
+           data-aos-offset="500"
+           data-aos-duration="1000"
+        >
         <Input type="text"  placeholder='Search your favorite dish..' value={query} onChange={e=>setQuery(e.target.value)}/>
         <Button type='search'>Search</Button>
         <Select name="cars" id="cars" onChange={e=>setmealType(e.target.value)}>

@@ -14,7 +14,7 @@ const Home = () => {
   const [currentData,setData]=useState("");
   const [meal,setMeal]=useState("");
   const [enteredQuery,setEnteredQuery]=useState("");
-
+const [toggle,setToggle]=useState(false);
   
 
   const gettingData=useCallback(
@@ -22,13 +22,14 @@ const Home = () => {
     try {
       const {data}=   await axios.get(`https://api.edamam.com/search?q=${enteredQuery}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`);
     
-     console.log({data})
+
       setData(data)
     } catch (error) {
 
       if (error.response) {
         // The client was given an erroror response (5xx, 4xx)
         console.log('Error', error.message);
+        return;
     } else if (error.request) {
         // The client never received a response, and the request was never left
         console.log('Erroror', error.message);
@@ -45,12 +46,15 @@ const Home = () => {
 
   },[meal,enteredQuery,gettingData])
 
-const {hits}=currentData
-console.log(hits)
-if(hits?.length===0){
+const {hits}=currentData;
+
+
+
+if(hits?.length===0  ){
 
  
-   
+ if(!toggle)
+  {  console.log(hits.length)
      toast.error('Please enter a valid query!', {
       position: "top-right",
       autoClose: 1000,
@@ -60,17 +64,22 @@ if(hits?.length===0){
       draggable: true,
       progress: undefined,
       });
- 
+   setToggle(true)
+  }else{
+    console.log("error")
+  }
+
 }
 
 
   return (
     <Section>
         <Title>Recipe App</Title>
-        <Form meal={setMeal} enteredQuery={setEnteredQuery} ></Form>
+        <Form meal={setMeal} enteredQuery={setEnteredQuery}
+      ></Form>
      { hits&& <RecipeList meals={hits} />}
 
-     <ToastContainer />
+ 
     </Section>
   )
 }

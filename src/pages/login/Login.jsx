@@ -24,7 +24,7 @@ onLogin(userName)
 
   return (
     <Fragment>
-      <LoginContainer>
+      <LoginContainer data-aos="zoom-out">
         <LoginCard >
           
           <LoginImg  src={meal2} />

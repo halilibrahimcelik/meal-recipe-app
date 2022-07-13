@@ -5,7 +5,7 @@ import Details from '../../pages/details/Details';
 
 const RecipeCard = ({infos}) => {
   const navigate=useNavigate();
-    console.log(infos)
+
     const {label,image}=infos;
   return (
     <Wrapper  >

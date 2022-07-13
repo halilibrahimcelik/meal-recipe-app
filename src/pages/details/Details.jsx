@@ -9,12 +9,12 @@ const Details = (data) => {
     const navigate=useNavigate();
     const {infos}=location.state
     const {cuisineType,ingredients,label,calories,image}=infos;
-    console.log(ingredients)
+
 
     function capitalize(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
-    console.log(cuisineType)
+ 
     return (
     <Fragment>
         <Container>
