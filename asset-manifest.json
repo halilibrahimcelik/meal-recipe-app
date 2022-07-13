@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/meal-recipe-app/static/css/main.2c655457.css",
-    "main.js": "/meal-recipe-app/static/js/main.dade9687.js",
+    "main.js": "/meal-recipe-app/static/js/main.b74c3238.js",
     "static/media/not found.jpg": "/meal-recipe-app/static/media/not found.9ed06af7b149c4bfe9d6.jpg",
     "static/media/calories.png": "/meal-recipe-app/static/media/calories.58948afe5601d001c4ea.png",
     "static/media/coding.svg": "/meal-recipe-app/static/media/coding.0ee2fc3a99672b144ac05c8cb4994d69.svg",
@@ -9,10 +9,10 @@
     "static/media/meal2.svg": "/meal-recipe-app/static/media/meal2.8b3981f1fe2ca68e4835e1c8fc411835.svg",
     "index.html": "/meal-recipe-app/index.html",
     "main.2c655457.css.map": "/meal-recipe-app/static/css/main.2c655457.css.map",
-    "main.dade9687.js.map": "/meal-recipe-app/static/js/main.dade9687.js.map"
+    "main.b74c3238.js.map": "/meal-recipe-app/static/js/main.b74c3238.js.map"
   },
   "entrypoints": [
     "static/css/main.2c655457.css",
-    "static/js/main.dade9687.js"
+    "static/js/main.b74c3238.js"
   ]
 }
