@@ -9,6 +9,7 @@ import NotFound from "../pages/notFound/NotFound";
 import Details from "../pages/details/Details";
 import RequiredAuth from "../components/RequiredAuth/RequiredAuth";
 import useAuth from "../hooks/useAuth";
+import NotAuthorized from "../pages/notAuthorized/NotAuthorized";
 
 const AppRouter = () => {
 
@@ -25,7 +26,7 @@ const AppRouter = () => {
 
     <Route element={<RequiredAuth/>}>
 
-       {context.isLoggedIn && <Route path="/home" element={<Home/>} />}
+       {context.isLoggedIn ? <Route path="/home" element={<Home/>} />:<Route path="/home" element={<NotAuthorized/>} /> }
       {context.isLoggedIn &&  <Route path="/home/details" element={<Details/>} />}
       (context.isLoggedIn &&  <Route path="/about" element={<About/>} />)
     </Route>

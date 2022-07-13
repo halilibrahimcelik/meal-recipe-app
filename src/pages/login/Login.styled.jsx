@@ -58,7 +58,9 @@ padding:0.5rem 1rem;
 margin:0 auto;
 border:none;
 border-radius:6px;
-background-color:${({theme})=>theme.colors.colorDarkBlue};
+background-color:${({bg, theme})=>
+bg? `${theme.colors.colorBtnDanger}`:` ${theme.colors.colorDarkBlue}`};
+
 color:white;
 font-weight: bold;
 transition:all 0.4s ease-in-out ;
