@@ -13,8 +13,13 @@ This is the first time I practised private and  authtenticaded routes .
  Techniques that I  implemented in this project;
  *****
 Creating basic login page for the authentication,
-Using React-Router  Library to facilitate easy page transisition.
-Adopting Styled Components for styling each and every component
-Using Themes and Global variables 
-Creating custom react hook by using useContext for authentication.
-using axios for fetching the API from the server.
+
+--Using React-Router  Library to facilitate easy page transisition,
+
+--Adopting Styled Components for styling each and every component,
+
+--Using Themes and Global variables, 
+
+--Creating custom react hook by using useContext for authentication,
+
+--using axios for fetching the API from the server,
