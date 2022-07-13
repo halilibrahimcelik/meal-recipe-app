@@ -21,7 +21,7 @@ const Form = (props) => {
         draggable: true,
         progress: undefined,
         });
-      console.log("olmaz");
+    
       return
     }
 

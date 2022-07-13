@@ -53,7 +53,7 @@ const {hits}=currentData;
   if(hits?.length===0  ){
   
    if(!toggle)
-    {  console.log(hits.length)
+    {  
        toast.error('Please enter a valid query!', {
         position: "top-right",
         autoClose: 1000,
@@ -65,7 +65,7 @@ const {hits}=currentData;
         });
      setToggle(!toggle)
     }
-    console.log(hits.length)
+  
   }
 
 
