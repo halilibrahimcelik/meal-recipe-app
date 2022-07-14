@@ -42,29 +42,36 @@ const [toggle,setToggle]=useState(false);
     
 
   useEffect(()=>{
+    const  data= setTimeout(()=>{
       gettingData()
+    },500);
+    return ()=>{
+  
+      clearTimeout(data);
+    }
+  
 
-  },[meal,enteredQuery,gettingData])
+  },[gettingData])
 
 const {hits}=currentData;
 
 
 
-  if(hits?.length===0  ){
+  if(hits?.length===0 &&meal ){
   
-   if(!toggle)
-    {  
-       toast.error('Please enter a valid query!', {
-        position: "top-right",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        });
-     setToggle(!toggle)
-    }
+   if(!toggle){
+     toast.error('Please enter a valid query!', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+setToggle(!toggle);
+   }
+  
   
   }
 
@@ -77,7 +84,7 @@ const {hits}=currentData;
         <Title>Recipe App</Title>
         <Form meal={setMeal} enteredQuery={setEnteredQuery}
       ></Form>
-
+  {hits?.length===0&& meal&& <p style={{marginTop:"2rem", fontSize:"1.3rem", color:"#913c3c", fontWeight:"800"}}>Please type a valid recipe :(</p> }
      { hits&& <RecipeList meals={hits} />}
 
 

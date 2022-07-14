@@ -4,10 +4,10 @@ import { Container,Title,Wrapper,Image,H2,IngredientCard,Card,Flex} from './Deta
 import caloryIcon from "../../assets/calories.png";
 import { LoginButton } from '../login/Login.styled';
 
-const Details = (data) => {
+const Details = () => {
     const location=useLocation();
     const navigate=useNavigate();
-    const {infos}=location.state
+    const {infos}=location.state;
     const {cuisineType,ingredients,label,calories,image}=infos;
 
 
