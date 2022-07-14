@@ -6,8 +6,8 @@ import axios from "axios";
 import RecipeList from '../../components/recipeList/RecipeList';
 import { toast,ToastContainer } from 'react-toastify';
 
-const APP_KEY="8d62be9b0f0896b948402c50250d84c3";
-const APP_ID="10d664a5";
+const APP_KEY=process.env.REACT_APP_APP_KEY;
+const APP_ID=process.env.REACT_APP_APP_ID;
 
 
 const Home = () => {
